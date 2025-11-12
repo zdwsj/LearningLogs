@@ -160,3 +160,6 @@ if config.is_valid_platform():
                 'PORT': db_settings['port'],
             },
         }
+
+# PythonAnywhere 上部署的设置
+STATIC_ROOT = Path(BASE_DIR, 'static')
