@@ -163,3 +163,4 @@ if config.is_valid_platform():
 
 # PythonAnywhere 上部署的设置
 STATIC_ROOT = Path(BASE_DIR, 'static')
+
