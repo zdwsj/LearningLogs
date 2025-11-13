@@ -16,6 +16,7 @@ from django.conf.global_settings import LOGIN_REDIRECT_URL, LOGOUT_REDIRECT_URL
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+print(f'BASE_DIR:{BASE_DIR}')
 
 
 # Quick-start development settings - unsuitable for production
@@ -142,6 +143,7 @@ from platformshconfig import Config
 config = Config()
 if config.is_valid_platform():
     ALLOWED_HOSTS.append('.platformsh.site')
+    DEBUG = False
 
     if config.appDir:
         STATIC_ROOT = Path(config.appDir) / 'static'
@@ -163,4 +165,5 @@ if config.is_valid_platform():
 
 # PythonAnywhere 上部署的设置
 STATIC_ROOT = Path(BASE_DIR, 'static')
+DEBUG = False
 
