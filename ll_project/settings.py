@@ -167,3 +167,5 @@ if config.is_valid_platform():
 STATIC_ROOT = Path(BASE_DIR, 'static')
 DEBUG = False
 
+
+
